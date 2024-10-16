@@ -56,7 +56,7 @@ namespace IRReceiver
 
         receive_config = {
             .signal_range_min_ns = 1250,
-            .signal_range_max_ns = 12 * 1000 * 1000
+            .signal_range_max_ns = 10 * 1000 * 1000
         };
     }
 
@@ -69,6 +69,7 @@ namespace IRReceiver
         {
             rmt_symbol_word_t word = rx_data.received_symbols[i];
             std::cout << std::hex << std::noshowbase << std::setw(8) << std::setfill('0') << word.val;
+            //std::cout << word.level0 << ": " << word.duration0 << ", " << word.level1 << ": " << word.duration1 << std::endl;
         }
 
         std::cout << std::endl << std::endl;

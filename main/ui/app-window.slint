@@ -1,0 +1,50 @@
+
+export global Logic {
+    pure callback receive_ready();
+}
+
+export component AppWindow inherits Window {
+    VerticalLayout {
+        alignment: center;
+        width: 70%;
+        height: 100%;
+
+        Text {
+            font-size: 20px;
+            text: "Learn Mode";
+        }
+    
+        Text {
+            text: "Ensure ir switch is set to learn and not transmit";
+        }
+    
+        Text {
+            text: "Connect usb to pc and begin monitoring";
+        }
+    
+        Text {
+            text: "Point remote at receiver and press a button";
+        }
+
+        Text {
+            text: "The code will be printed out in the monitor terminal";
+        }
+
+        Rectangle {
+            width: 100%;
+            height: 200px;
+            border-color: black;
+            border-width: 2px;
+
+            Text {
+                text: "Click to begin receiving, only need to click once";
+            }
+
+            TouchArea {
+                clicked => {
+                    Logic.receive_ready();
+                }
+            }
+        }
+    }
+}

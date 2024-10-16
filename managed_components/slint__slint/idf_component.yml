@@ -1,0 +1,15 @@
+dependencies:
+  esp_lcd_touch:
+    public: true
+    version: '>=1.0.4'
+  idf: '>=5.1'
+description: Slint — declarative GUI toolkit
+discussion: https://github.com/slint-ui/slint/discussions
+documentation: https://slint.dev/docs
+license: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-2.0 OR LicenseRef-Slint-Software-3.0
+repository: git://github.com/slint-ui/slint.git
+repository_info:
+  commit_sha: 624ea2b8724039d6dc8a4cf5a5f021f072893060
+  path: api/cpp/esp-idf/slint
+url: https://slint.dev/
+version: 1.8.0
